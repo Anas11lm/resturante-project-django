@@ -1,0 +1,55 @@
+
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-between">
+      <div class="contact-info">
+        <i class="icofont-phone"></i> +1 5589 55488 55
+        <span class="d-none d-lg-inline-block"><i class="icofont-clock-time icofont-rotate-180"></i> Mon-Sat: 11:00 AM - 23:00 PM</span>
+      </div>
+      <div class="languages">
+        <ul>
+          <li>En</li>
+          <li><a href="#">Fn</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="{% url 'index' %}">Restaurantly</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'menu' %}">Menu</a></li>
+          <li><a href="{% url 'specials' %}">Specials</a></li>
+          <li><a href="{% url 'events' %}">Events</a></li>
+          <li><a href="{% url 'gallery' %}">Gallery</a></li>
+          <li><a href="{% url 'chefs' %}">Chefs</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+          <li class="book-a-table text-center"><a href="{% url 'book' %}">Book a table</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+  <br>
+    <br>
+    <br>
+    <br>
+    <br>
+ {% if messages %}
+ {% for message in messages %}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  {{message}}
+</div>
+ {% endfor %}
+
+ {% endif %}   
+
